@@ -132,7 +132,7 @@ module TableHelper
         content << @header.html unless @header.empty?
         content << @rows.html
         content << @footer.html unless @footer.empty?
-        content
+        content.html_safe
       end
   end
 end

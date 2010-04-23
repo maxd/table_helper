@@ -34,7 +34,7 @@ module TableHelper
       namespace = html_options.delete(:namespace)
       super(html_options)
       
-      @content = content.to_s
+      @content = content.to_s.html_safe
       
       if name
         name = "#{namespace}-#{name}" unless namespace.blank?

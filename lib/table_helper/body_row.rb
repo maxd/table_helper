@@ -68,7 +68,7 @@ module TableHelper
           html << cell.html
         end
         
-        html
+        html.html_safe
       end
   end
 end

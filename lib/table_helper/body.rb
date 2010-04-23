@@ -80,7 +80,7 @@ module TableHelper
       row = BodyRow.new(object, self)
       row.alternate = alternate ? index.send("#{alternate}?") : false
       @builder.call(row.builder, object, index) if @builder
-      row.html
+      row.html.html_safe
     end
     
     private
@@ -107,7 +107,7 @@ module TableHelper
           end
         end
         
-        content
+        content.html_safe
       end
   end
 end

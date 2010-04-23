@@ -104,7 +104,7 @@ module TableHelper
       end
       
       def content
-        cells.values.map(&:html).join
+        cells.values.map(&:html).join.html_safe
       end
   end
 end
