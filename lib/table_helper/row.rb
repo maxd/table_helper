@@ -1,5 +1,9 @@
 require 'table_helper/cell'
 
+if Rails::VERSION::MAJOR >= 3
+  require 'builder'
+end
+
 module TableHelper
   # Provides a blank class that can be used to build the cells for a row
   class RowBuilder < BlankSlate #:nodoc:
